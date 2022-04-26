@@ -1,0 +1,6 @@
+
+/* ejercicio 1 de la guia practica */
+
+process.argv.forEach((index,val) =>{
+    console.log(`${index}: ${val}`);
+});

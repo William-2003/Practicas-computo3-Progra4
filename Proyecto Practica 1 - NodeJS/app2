@@ -1,0 +1,93 @@
+
+/* ejercicio 2  de la guia practica */
+
+const {suma, resta, multiplicacion, division} =require('./funciones2');
+let inicio = 1;
+let fin = 50;
+let numal = inicio + Math.floor(Math.random()*fin);
+/* console.log(numal); */
+
+
+
+
+
+/* pedir la operacion a ingresar ---------------------------------------------------------------------- */ 
+const operacion = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+operacion.question("Que operacion deseas realizar?", operacion=>{
+    if(operacion=="suma"){
+        const resultado = suma(numal,numal)
+        console.log(`El resultado de tu ${operacion} es ${resultado}`);
+
+
+    }else if(operacion=="resta"){
+        const resultado = resta(numal,numal);
+        console.log(`El resultado de tu ${operacion} es ${resultado}`);
+
+
+    }else if(operacion=="multiplicacion"){
+        const resultado = multiplicacion(numal,numal);
+        console.log(`El resultado de tu ${operacion} es ${resultado}`);
+
+
+    }else if(operacion=="division"){
+        const resultado = division(n1,n2);
+        console.log(`El resultado de tu ${operacion} es ${resultado}`)
+
+
+    }else{
+        console.log("Has escrito algo que no denota una operacion")
+    }
+})
+
+
+
+
+/* pedir el primer numero a operar ---------------------------------------------------------------------- */ 
+/* const n1 = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+n1.question("Ingresa el primer numero a operar:", n1=>{
+    console.log(`tu primer numero es:  ${n1}`)
+}) */
+
+
+
+
+
+
+/* pedir el segundo numero a operar ---------------------------------------------------------------------- */ 
+/* const n2 = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+n2.question("Ingresa el segundo numero a operar:", n2=>{
+    console.log(`Tu segundo numero es:  ${n2}`)
+})
+ */
+
+
+
+/* if(operacion==suma){
+    const resultado = suma(n1,n2);
+    console.log(`El resultado de tu ${operacion} es ${resultado}`)
+}else if(operacion==resta){
+    const resultado = resta(n1,n2);
+    console.log(`El resultado de tu ${operacion} es ${resultado}`)
+}else if(operacion==multiplicacion){
+    const resultado = multiplicacion(n1,n2);
+    console.log(`El resultado de tu ${operacion} es ${resultado}`)
+}else if(operacion==division){
+    const resultado = division(n1,n2);
+    console.log(`El resultado de tu ${operacion} es ${resultado}`)
+}else{
+    console.log("Has escrito algo que no denota una operacion")
+} */
+    
+
