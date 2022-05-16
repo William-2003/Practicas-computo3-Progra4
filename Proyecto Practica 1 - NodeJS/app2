@@ -6,6 +6,8 @@ let inicio = 1;
 let fin = 50;
 let numal = inicio + Math.floor(Math.random()*fin);
 /* console.log(numal); */
+let numob1 = 0;
+let numob2 = 0;
 
 
 
@@ -19,23 +21,31 @@ const operacion = require('readline').createInterface({
 
 operacion.question("Que operacion deseas realizar?", operacion=>{
     if(operacion=="suma"){
-        const resultado = suma(numal,numal)
-        console.log(`El resultado de tu ${operacion} es ${resultado}`);
+        numob1 = numal;
+        numob2 = numal;
+        const resultado = suma(numob1,numob2)
+        console.log(`El resultado de tu ${operacion}: ${numob1} + :${numob2} es ${resultado}`);
 
 
     }else if(operacion=="resta"){
-        const resultado = resta(numal,numal);
-        console.log(`El resultado de tu ${operacion} es ${resultado}`);
+        numob1 = numal;
+        numob2 = numal;
+        const resultado = resta(numob1,numob2);
+        console.log(`El resultado de tu ${operacion}: ${numob1} - :${numob2} es ${resultado}`);
 
 
     }else if(operacion=="multiplicacion"){
-        const resultado = multiplicacion(numal,numal);
-        console.log(`El resultado de tu ${operacion} es ${resultado}`);
+        numob1 = numal;
+        numob2 = numal;
+        const resultado = multiplicacion(numob1,numob2);
+        console.log(`El resultado de tu ${operacion}: ${numob1} x :${numob2} es ${resultado}`);
 
 
     }else if(operacion=="division"){
-        const resultado = division(n1,n2);
-        console.log(`El resultado de tu ${operacion} es ${resultado}`)
+        numob1 = numal;
+        numob2 = numal;
+        const resultado = division(numob1,numob2);
+        console.log(`El resultado de tu ${operacion}: ${numob1} / :${numob2} es ${resultado}`);
 
 
     }else{
