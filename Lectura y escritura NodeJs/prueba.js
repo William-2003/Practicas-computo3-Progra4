@@ -48,7 +48,7 @@ rl.on('line', (input)=>{
         var mensaje = util.format("Te llamas %s y esto fue lo que me dijiste %j ", persona.nombre, persona.comentarios);
         console.log(mensaje);
         console.log(typeof persona)
-        console.log(persona);
+        console.table(persona);
         /* var salida = JSON.stringify(persona);
         console.log(salida)
         var tojson = JSON.parse(salida);
@@ -71,13 +71,15 @@ rl.on('line', (input)=>{
 
 
 
-
-
 //FUNCION PARA LA CONVERSION DE JSON A CSV
 function tocsv(data){
+
+    var n = persona.nombre
+    var nombre_archivo = n + '.csv'
+
     var prueba = [data]
     var write = csvWrite.createObjectCsvWriter({
-        path:'salida.csv',
+        path:nombre_archivo,
         header:[
             {id: 'nombre',title:"Nombre del usuario"},
             {id: 'comentarios',title:"Comentarios recibidos."}
